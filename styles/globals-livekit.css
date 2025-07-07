@@ -1,0 +1,151 @@
+/* LiveKit Global Styles Override */
+
+/* Enhanced video layout styling */
+.lk-grid-layout {
+  gap: 12px !important;
+  padding: 20px !important;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 320px)) !important;
+  grid-auto-rows: minmax(210px, 240px) !important;
+  justify-content: center !important;
+}
+
+.lk-participant-tile {
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+  border: 2px solid rgba(255, 255, 255, 0.1) !important;
+  max-width: 320px !important;
+  max-height: 240px !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.lk-participant-tile[data-lk-speaking="true"] {
+  border-color: #4299e1 !important;
+  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.3) !important;
+}
+
+.lk-participant-name {
+  background: rgba(26, 32, 44, 0.9) !important;
+  color: white !important;
+  font-weight: 600 !important;
+  padding: 6px 10px !important;
+  border-radius: 6px !important;
+  font-size: 12px !important;
+}
+
+.lk-participant-tile video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.lk-participant-tile .lk-participant-placeholder {
+  font-size: 14px !important;
+}
+
+/* Chat styling */
+.lk-chat {
+  height: 100% !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  overflow: hidden !important;
+  flex: 1 !important;
+}
+
+.lk-chat-messages {
+  background: transparent !important;
+  padding: 16px !important;
+  flex: 1 !important;
+  overflow-y: auto !important;
+}
+
+.lk-chat-entry {
+  background: rgba(45, 55, 72, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
+  margin-bottom: 8px !important;
+  color: white !important;
+}
+
+.lk-chat-entry .lk-meta {
+  color: #a0aec0 !important;
+  font-size: 0.75rem !important;
+}
+
+.lk-chat-entry .lk-message {
+  color: white !important;
+  font-size: 0.9rem !important;
+}
+
+.lk-chat-form {
+  background: rgba(45, 55, 72, 0.9) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding: 12px !important;
+  border-radius: 0 !important;
+}
+
+.lk-chat-form input {
+  background: rgba(26, 32, 44, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+  border-radius: 6px !important;
+  padding: 8px 12px !important;
+  font-size: 0.9rem !important;
+}
+
+.lk-chat-form input::placeholder {
+  color: #a0aec0 !important;
+}
+
+.lk-chat-form input:focus {
+  outline: none !important;
+  border-color: #4299e1 !important;
+  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.2) !important;
+}
+
+.lk-chat-form button {
+  background: #4299e1 !important;
+  border: none !important;
+  color: white !important;
+  border-radius: 6px !important;
+  padding: 8px 16px !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+}
+
+.lk-chat-form button:hover {
+  background: #3182ce !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Responsive Design for LiveKit components */
+@media (max-width: 768px) {
+  .lk-grid-layout {
+    gap: 8px !important;
+    padding: 12px !important;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 250px)) !important;
+    grid-auto-rows: minmax(150px, 180px) !important;
+  }
+
+  .lk-participant-tile {
+    max-width: 250px !important;
+    max-height: 180px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .lk-grid-layout {
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: minmax(180px, 220px) !important;
+    gap: 12px !important;
+  }
+
+  .lk-participant-tile {
+    max-width: 100% !important;
+    max-height: 220px !important;
+  }
+}
